@@ -1,0 +1,38 @@
+/* Shared user block for super-admin nav (sits inside page <nav>) */
+.super-admin-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+  padding-left: 1rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.super-admin-nav-name {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.super-admin-nav-logout {
+  padding: 0.35rem 0.75rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.super-admin-nav-logout:hover {
+  background: #cbd5e0;
+  color: #2d3748;
+}
+
+/* Let long nav wrap on smaller screens when super admin */
+nav:has(.super-admin-nav-user) {
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}

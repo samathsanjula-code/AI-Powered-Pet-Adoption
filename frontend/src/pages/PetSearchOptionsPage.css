@@ -1,0 +1,262 @@
+/* Palette aligned with mockup: orange accent, cream secondary, clean sans-serif */
+.pet-options-page {
+  --pet-options-orange: #e67e22;
+  --pet-options-orange-dark: #c86a1a;
+  --pet-options-cream: #fdecd9;
+  --pet-options-cream-border: #f5c896;
+  --pet-options-heading: #1a2332;
+  --pet-options-text: #5c6570;
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.pet-options-header {
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 20;
+}
+
+.pet-options-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+  text-decoration: none;
+}
+
+.pet-options-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pet-options-header nav a {
+  color: #4a5568;
+  text-decoration: none;
+}
+
+.pet-options-header nav a:hover,
+.pet-options-header nav a.active {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.pet-options-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.pet-options-nav-user span {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.pet-options-logout {
+  padding: 0.35rem 0.75rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.pet-options-logout:hover {
+  background: #cbd5e0;
+  color: #2d3748;
+}
+
+.pet-options-main {
+  padding: 0;
+}
+
+/* Full-width hero: dog photo + dark overlay + centered white copy */
+.pet-options-hero {
+  position: relative;
+  min-height: 52vh;
+  min-height: min(520px, 70vh);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pet-options-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.pet-options-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 24, 32, 0.35) 0%,
+    rgba(20, 24, 32, 0.55) 45%,
+    rgba(20, 24, 32, 0.72) 100%
+  );
+}
+
+.pet-options-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3rem 1.75rem 3.5rem;
+  text-align: center;
+}
+
+.pet-options-hero-inner h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  line-height: 1.15;
+}
+
+.pet-options-hero-text {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pet-options-hero-text strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.pet-options-hero-text em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Card strip */
+.pet-options-cards-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.pet-options-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.pet-options-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(26, 35, 50, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-options-card-image {
+  aspect-ratio: 16 / 10;
+  background: #e8edf2;
+  overflow: hidden;
+}
+
+.pet-options-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pet-options-card-body {
+  padding: 1.5rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pet-options-card-body h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pet-options-heading);
+  letter-spacing: -0.01em;
+}
+
+.pet-options-card-body p {
+  margin: 0 0 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--pet-options-text);
+  flex: 1;
+}
+
+/* Buttons: solid orange + cream outline */
+.pet-options-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.pet-options-btn--primary {
+  background: var(--pet-options-orange);
+  color: #fff;
+  border: 2px solid var(--pet-options-orange);
+  box-shadow: 0 4px 14px rgba(230, 126, 34, 0.35);
+}
+
+.pet-options-btn--primary:hover {
+  background: var(--pet-options-orange-dark);
+  border-color: var(--pet-options-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+}
+
+.pet-options-btn--outline {
+  background: var(--pet-options-cream);
+  color: #a85a12;
+  border: 2px solid var(--pet-options-orange);
+}
+
+.pet-options-btn--outline:hover {
+  background: #fff5eb;
+  color: #8f4a0f;
+  transform: translateY(-1px);
+}
+
+.pet-options-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .pet-options-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-options-hero-inner {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+}

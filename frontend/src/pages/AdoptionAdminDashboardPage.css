@@ -1,0 +1,203 @@
+.adoption-admin-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.adoption-admin-header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.adoption-admin-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.adoption-admin-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.adoption-admin-header nav a {
+  color: #4a5568;
+  text-decoration: none;
+}
+
+.adoption-admin-header nav a:hover,
+.adoption-admin-header nav a.active {
+  color: #dd6b20;
+  font-weight: 600;
+}
+
+.adoption-admin-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.adoption-admin-nav-user span {
+  color: #2d3748;
+}
+
+.logout-btn {
+  padding: 0.4rem 0.8rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.logout-btn:hover {
+  background: #cbd5e0;
+}
+
+.adoption-admin-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.adoption-admin-main h1 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.adoption-admin-sub {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+.adoption-admin-filters {
+  margin-bottom: 1rem;
+}
+
+.adoption-admin-filters label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.adoption-admin-filters select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.adoption-admin-table-wrap {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  overflow-x: auto;
+}
+
+.adoption-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adoption-admin-table th,
+.adoption-admin-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.adoption-admin-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.adoption-admin-table td code {
+  font-family: monospace;
+  font-size: 0.85rem;
+  background: #f7fafc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-approved {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-rejected {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.btn-approve {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.btn-approve:hover {
+  background: #38a169;
+}
+
+.btn-reject {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-reject:hover {
+  background: #c53030;
+}
+
+.no-action {
+  color: #a0aec0;
+}
+
+.no-data {
+  text-align: center;
+  color: #718096;
+  padding: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+}
+
+.adoption-admin-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
