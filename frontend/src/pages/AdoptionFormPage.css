@@ -1,0 +1,236 @@
+.adoption-form-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.adoption-form-header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.adoption-form-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.adoption-form-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.adoption-form-header nav a {
+  color: #4a5568;
+  text-decoration: none;
+}
+
+.adoption-form-header nav a:hover {
+  color: #dd6b20;
+}
+
+.adoption-form-main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.adoption-form-main h1 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.adoption-form-sub {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+.adoption-form-pet-summary {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.adoption-form-pet-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.adoption-form-pet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adoption-form-pet-info h3 {
+  margin: 0 0 0.25rem 0;
+  color: #1a202c;
+}
+
+.adoption-form-pet-info p {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.adoption-form-pet-category {
+  font-size: 0.8rem !important;
+  color: #a0aec0 !important;
+}
+
+.adoption-form {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.adoption-form-group {
+  margin-bottom: 1rem;
+}
+
+.adoption-form-group label {
+  display: block;
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.adoption-form-group input,
+.adoption-form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.adoption-form-readonly {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+.adoption-form-err {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.adoption-form-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: #dd6b20;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.adoption-form-submit:hover:not(:disabled) {
+  background: #c05621;
+}
+
+.adoption-form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.adoption-form-success {
+  text-align: center;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.adoption-form-success .success-icon {
+  width: 60px;
+  height: 60px;
+  background: #48bb78;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.adoption-form-success h2 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+}
+
+.adoption-form-success p {
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.adoption-ref-id {
+  font-size: 1.1rem;
+  margin: 1rem 0 !important;
+}
+
+.adoption-ref-note {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem !important;
+}
+
+.adoption-form-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: #dd6b20;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.adoption-form-btn:hover {
+  background: #c05621;
+}
+
+.adoption-form-btn.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.adoption-form-btn.secondary:hover {
+  background: #cbd5e0;
+}
+
+.adoption-form-loading,
+.adoption-form-error {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+}
+
+.adoption-form-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}

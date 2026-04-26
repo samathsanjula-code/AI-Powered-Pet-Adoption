@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net" modified="2026-02-27T00:00:00.000Z" agent="Cursor" version="24.7.8" type="device">
+  <diagram id="pet-adoption-eer" name="EER" compressed="false">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="users" value="&lt;b&gt;users&lt;/b&gt;&lt;br/&gt;&lt;div style=&quot;font-size:12px&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id : BIGINT&lt;br/&gt;email : VARCHAR(255) UNIQUE NOT NULL&lt;br/&gt;password : VARCHAR(255) NOT NULL&lt;br/&gt;name : VARCHAR(255)&lt;br/&gt;role : VARCHAR(50)&lt;br/&gt;created_at : TIMESTAMP DEFAULT CURRENT_TIMESTAMP&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="330" height="190" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pets" value="&lt;b&gt;pets&lt;/b&gt;&lt;br/&gt;&lt;div style=&quot;font-size:12px&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id : BIGINT&lt;br/&gt;registration_type : VARCHAR(255) NOT NULL&lt;br/&gt;category : VARCHAR(255) NOT NULL&lt;br/&gt;pet_name : VARCHAR(255)&lt;br/&gt;breed : VARCHAR(255)&lt;br/&gt;gender : VARCHAR(20)&lt;br/&gt;age : VARCHAR(255)&lt;br/&gt;age_type : VARCHAR(255)&lt;br/&gt;vaccinated : BOOLEAN (default false)&lt;br/&gt;dewormed : BOOLEAN (default false)&lt;br/&gt;neutered : BOOLEAN (default false)&lt;br/&gt;health_condition : VARCHAR(255)&lt;br/&gt;behavior_tags : VARCHAR(500)&lt;br/&gt;contact_name : VARCHAR(255)&lt;br/&gt;phone_number : VARCHAR(255)&lt;br/&gt;&lt;b&gt;FK&lt;/b&gt; user_id : BIGINT&lt;br/&gt;image_paths : VARCHAR(1000)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="430" y="40" width="360" height="360" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adoption_applications" value="&lt;b&gt;adoption_applications&lt;/b&gt;&lt;br/&gt;&lt;div style=&quot;font-size:12px&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id : BIGINT&lt;br/&gt;application_id : VARCHAR(50) UNIQUE NOT NULL&lt;br/&gt;&lt;b&gt;FK&lt;/b&gt; pet_id : BIGINT NOT NULL&lt;br/&gt;applicant_name : VARCHAR(200) NOT NULL&lt;br/&gt;applicant_email : VARCHAR(200) NOT NULL&lt;br/&gt;applicant_phone : VARCHAR(50)&lt;br/&gt;message : VARCHAR(1000)&lt;br/&gt;status : VARCHAR(20) NOT NULL (default PENDING)&lt;br/&gt;&lt;b&gt;FK&lt;/b&gt; user_id : BIGINT&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="850" y="60" width="360" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="seller_items" value="&lt;b&gt;seller_items&lt;/b&gt;&lt;br/&gt;&lt;div style=&quot;font-size:12px&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id : BIGINT&lt;br/&gt;title : VARCHAR(255) NOT NULL&lt;br/&gt;category : VARCHAR(50) NOT NULL&lt;br/&gt;description : VARCHAR(2000)&lt;br/&gt;price : DOUBLE NOT NULL&lt;br/&gt;brand : VARCHAR(255)&lt;br/&gt;quantity_in_stock : INT&lt;br/&gt;image_paths : VARCHAR(2000)&lt;br/&gt;suitable_for : VARCHAR(100)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="330" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="breed_identifications" value="&lt;b&gt;breed_identifications&lt;/b&gt;&lt;br/&gt;&lt;div style=&quot;font-size:12px&quot;&gt;&lt;b&gt;PK&lt;/b&gt; id : BIGINT&lt;br/&gt;guessed_breed : VARCHAR(200)&lt;br/&gt;confidence_level : VARCHAR(50)&lt;br/&gt;pet_category : VARCHAR(50)&lt;br/&gt;pet_size : VARCHAR(50)&lt;br/&gt;coat_color : VARCHAR(100)&lt;br/&gt;estimated_age : VARCHAR(50)&lt;br/&gt;additional_notes : VARCHAR(1000)&lt;br/&gt;image_paths : VARCHAR(1000)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="430" y="460" width="360" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_pets_users" value="pets.user_id → users.id&#10;(N:1, inferred FK)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontColor=#000000;" edge="1" parent="1" source="pets" target="users">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_apps_pets" value="adoption_applications.pet_id → pets.id&#10;(N:1, inferred FK)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;fontColor=#000000;" edge="1" parent="1" source="adoption_applications" target="pets">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_apps_users" value="adoption_applications.user_id → users.id&#10;(N:1, inferred FK)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;fontColor=#000000;" edge="1" parent="1" source="adoption_applications" target="users">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

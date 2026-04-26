@@ -1,0 +1,43 @@
+.breed-options-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.breed-options-header {
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.breed-options-logo { color: #1a365d; text-decoration: none; font-size: 1.5rem; font-weight: 700; }
+.breed-options-header nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.breed-options-header nav a { text-decoration: none; color: #4a5568; }
+.breed-options-header nav a.active, .breed-options-header nav a:hover { color: #2b6cb0; font-weight: 600; }
+.breed-options-nav-user { display: flex; gap: .7rem; align-items: center; border-left: 1px solid #e2e8f0; padding-left: .9rem; }
+.breed-options-logout { border: none; background: #e2e8f0; border-radius: 6px; padding: .35rem .75rem; cursor: pointer; }
+
+.breed-options-hero { position: relative; min-height: 48vh; display: flex; align-items: end; }
+.breed-options-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.breed-options-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12, 24, 48, .35), rgba(12, 24, 48, .74)); }
+.breed-options-hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2.5rem 2rem 3rem; color: #fff; }
+.breed-options-hero-content h1 { margin: 0 0 .75rem; font-size: clamp(1.9rem, 4.2vw, 2.7rem); }
+.breed-options-hero-content p { margin: 0; line-height: 1.7; }
+
+.breed-options-main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 2.8rem; }
+.breed-options-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.breed-options-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 26px rgba(20, 34, 60, 0.08); }
+.breed-options-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.breed-options-card-body { padding: 1.25rem 1.25rem 1.5rem; }
+.breed-options-card-body h2 { margin: 0 0 .6rem; color: #1f2937; }
+.breed-options-card-body p { margin: 0 0 1rem; color: #5b6472; line-height: 1.6; }
+.breed-options-btn { display: inline-block; text-decoration: none; border-radius: 10px; padding: .72rem 1rem; font-weight: 600; }
+.breed-options-btn.primary { background: #eb7e22; color: #fff; }
+.breed-options-btn.secondary { background: #fff3e3; color: #9b580f; border: 1px solid #ebb27b; }
+
+@media (max-width: 820px) {
+  .breed-options-cards { grid-template-columns: 1fr; }
+}

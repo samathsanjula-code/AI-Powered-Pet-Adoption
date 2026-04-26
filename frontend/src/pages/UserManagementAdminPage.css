@@ -1,0 +1,264 @@
+/* Aligned with AdminDashboardPage / AdoptionAdminDashboardPage */
+.user-mgmt-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.user-mgmt-header {
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.user-mgmt-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.user-mgmt-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.user-mgmt-header nav a {
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.user-mgmt-header nav a:hover,
+.user-mgmt-header nav a.active {
+  color: #dd6b20;
+  font-weight: 600;
+}
+
+.user-name {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 0.4rem 0.8rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  color: #4a5568;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background: #cbd5e0;
+  color: #2d3748;
+}
+
+.user-mgmt-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-mgmt-main h1 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.user-mgmt-sub {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.error {
+  color: #c53030;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: #fff5f5;
+  border-radius: 8px;
+  border: 1px solid #feb2b2;
+}
+
+.info {
+  color: #22543d;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: #f0fff4;
+  border-radius: 8px;
+  border: 1px solid #9ae6b4;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.panel-head input {
+  min-width: 240px;
+  max-width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #2d3748;
+}
+
+.panel-head input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.panel-head button {
+  padding: 0.45rem 1rem;
+  background: #edf2f7;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.panel-head button:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.user-mgmt-main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-mgmt-main th,
+.user-mgmt-main td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.user-mgmt-main th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.user-mgmt-main tbody tr:hover {
+  background: #f8fafc;
+}
+
+.user-mgmt-main input,
+.user-mgmt-main select {
+  width: 100%;
+  max-width: 220px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #2d3748;
+}
+
+.user-mgmt-main input:focus,
+.user-mgmt-main select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.15);
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  margin-right: 0.35rem;
+  margin-bottom: 0.25rem;
+  background: #3182ce;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.actions button:hover {
+  background: #2c5282;
+}
+
+.actions button.muted {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.actions button.muted:hover {
+  background: #cbd5e0;
+  color: #2d3748;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.tag.active {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.tag.inactive {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.tag.pending {
+  background: #feebc8;
+  color: #c05621;
+}
+
+.user-mgmt-main > p:not(.error):not(.info) {
+  color: #718096;
+  margin: 1rem 0;
+}
